@@ -1,0 +1,13 @@
+body {
+    background-image: url(assets/ct-redeye-millennial-travel-trends-20170224\ 2.jpg);
+    background-size: cover;
+    min-height: 100%;
+}
+
+.nav-link:hover {
+   background-color: rgb(255, 0, 0);
+}
+
+.active {
+    background-color: rgb(0, 0, 0);
+}
