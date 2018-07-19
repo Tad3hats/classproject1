@@ -38,7 +38,7 @@ $("#go-button").on("click", function (event) {
   var searchTerm = $("#searchInput").val().trim();
 
   var mapDiv = $("<div>");
-  var createMapIFrame = $('<br><iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAimomop0IzZOIELamWA3Ex_au10wqv25Y&q=' + searchTerm + '"allowfullscreen"></iframe>');
+  var createMapIFrame = $('<br><iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=&q=' + searchTerm + '"allowfullscreen"></iframe>');
   mapDiv.append(createMapIFrame);
   $("#map").append(mapDiv);
 
