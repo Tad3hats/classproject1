@@ -2,6 +2,8 @@ body {
     background-image: url(assets/ct-redeye-millennial-travel-trends-20170224\ 2.jpg);
     background-size: cover;
     min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed; 
 }
 
 .nav-link:hover {

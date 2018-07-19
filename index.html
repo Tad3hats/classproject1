@@ -46,7 +46,7 @@
                             <input type="search" class="form-control-lg text-center" id="searchInput" placeholder="Take me to...">
                         </div>
                         <div class="col-md-12 text-center">
-                            <button type="submit" class="btn btn-primary btn-lg">Go</button>
+                            <button type="submit" class="btn btn-primary btn-lg" id="go-button">Go</button>
                         </div>
                     </form>
             </div>
@@ -54,9 +54,29 @@
 
 
     </div>
+    <div class="container mt-5">
+        <div class="row">
+        <div class="col-md-6 text-center text-dark bg-light">
+            <div id="trending-videos"></div>
+        </div>
+        <div class="col-md-6 text-center text-dark bg-light">
+            <div id="hotel-videos"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div style="text-align: center" id="map">
+                <!-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAimomop0IzZOIELamWA3Ex_au10wqv25Y&q=Space+Needle,Seattle+WA" allowfullscreen></iframe> -->
+            </div>
+        </div>
+    </div>
 
+<!-- Link to Fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<!-- Link to Firebase-->
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="app.js"></script>
+<script src="index.js"></script>
     
 </body>
 </html>

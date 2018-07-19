@@ -32,19 +32,46 @@
         </div>
     </nav>
 
-    <div class="container mt-5 border border-dark">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-md-12 text-center text-white">
-                <h1>This is where the video check yes or no will go</h1>
+                <h1>Where would you like to go?</h1>
             </div>
         </div>
-    
+        <div class="row">
+            <div class="col-md-12">
+                    <form> 
+                        <div class="form-group text-center">
+                            <label for="searchQuery"></label>
+                            <input type="search" class="form-control-lg text-center" id="searchInput" placeholder="Take me to...">
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg" id="go-button">Go</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
 
 
     </div>
+    <div class="container mt-5">
+        <div class="row">
+        <div class="col-md-6 text-center text-dark bg-light">
+            <h1>What's Trending</h1>
+            <div id="trending-videos"></div>
+        </div>
+        <div class="col-md-6 text-center text-dark bg-light">
+            <h1>Hotels and Resorts</h1>
+            <div id="hotel-videos"></div>
+        </div>
+    </div>
 
+<!-- Link to Fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<!-- Link to Firebase-->
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="app.js"></script>
+<script src="inspiration.js"></script>
     
 </body>
 </html>
