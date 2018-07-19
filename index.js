@@ -149,7 +149,7 @@ database.ref('hotel').on("child_added", function(childSnapshot) {
     var textId = "#heart-" + hotelIndex
   
   $(textId).on("click", function (event) {
-    console.log(this)
+  
     event.preventDefault();
     
     var likedVideos = ($(this).attr("alt"));
