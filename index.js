@@ -66,7 +66,7 @@ $("#go-button").on("click", function (event) {
 
       var trendingVideoResults = response.items[i].id.videoId;
 
-      database.ref().push({
+      database.ref('trending').push({
         videoId: trendingVideoResults,
         type: "trending"
       });
@@ -88,7 +88,7 @@ $("#go-button").on("click", function (event) {
 
       var hotelVideoResults = response.items[i].id.videoId;
 
-      database.ref().push({
+      database.ref('hotel').push({
         videoId: hotelVideoResults,
         type: "hotel"
       });
@@ -100,61 +100,76 @@ $("#go-button").on("click", function (event) {
   
 });
 
-var chosenVideos = [];
 
-  database.ref().on("child_added", function(childSnapshot){
+var trendingIndex = 0;
+database.ref('trending').on("child_added", function(childSnapshot) {
+  console.log(childSnapshot)
 
-      var videoId = childSnapshot.val().videoId;
+    
+
+  var videoId = childSnapshot.val().videoId;
+  var trendingVideosDiv = $("<div>");
+
+  var trendingButtons = $('<br><button type=submit id="heart-' + trendingIndex + '"alt=' + videoId +' class="btn btn-primary btn-lg"><i class="far fa-heart"></i></button> <button type=submit class="btn btn-danger btn-lg"><i class="fa fa-frown"></i></button><br><br>');
+
+  var createTrendingIFrame = $('<iframe width="500" height="315" src="https://www.youtube.com/embed/' + videoId + ' "frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+
+  trendingVideosDiv.append(trendingButtons);
+  trendingVideosDiv.prepend(createTrendingIFrame);
+  $("#trending-videos").append(trendingVideosDiv);
+  var textId = "#heart-" + trendingIndex
+  console.log(textId)
+  
+  $(textId).on("click", function (event) {
+    console.log(this)
+    event.preventDefault();
+    
+    var likedVideos = ($(this).attr("alt"));
+
+    chosenVideos.push(likedVideos);
+    console.log(chosenVideos)
+  })
 
 
-      function makeVideos() {
+  trendingIndex++
+
+});
+
+database.ref('hotel').on("child_added", function(childSnapshot) {
+  console.log(childSnapshot)
+
+    var videoId = childSnapshot.val().videoId;
+
+    var hotelVideosDiv = $("<div>");
+
+    var hotelButtons = $("<br><button type=submit id='heart' alt=" + videoId +" class='btn btn-primary btn-lg'><i class='far fa-heart'></i></button> <button type=submit class='btn btn-danger btn-lg'><i class='fa fa-frown'></i></button><br><br>");
+
+    var createHotelIFrame = $('<iframe width="500" height="315" src="https://www.youtube.com/embed/' + videoId + ' "frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+
+    hotelVideosDiv.append(hotelButtons);
+    hotelVideosDiv.prepend(createHotelIFrame);
+    
+    $("#hotel-videos").append(hotelVideosDiv);
 
 
-        if (childSnapshot.val().type === "trending"){
-
-                var trendingVideosDiv = $("<div>");
-
-                var trendingButtons = $("<br><button type=submit id='heart' alt=" + videoId +" class='btn btn-primary btn-lg'><i class='far fa-heart'></i></button> <button type=submit class='btn btn-danger btn-lg'><i class='fa fa-frown'></i></button><br><br>");
-
-                var createTrendingIFrame = $('<iframe width="500" height="315" src="https://www.youtube.com/embed/' + videoId + ' "frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
-
-                trendingVideosDiv.append(trendingButtons);
-                trendingVideosDiv.prepend(createTrendingIFrame);
-                
-                $("#trending-videos").append(trendingVideosDiv);
-
-        } else {
-
-                var hotelVideosDiv = $("<div>");
-
-                var hotelButtons = $("<br><button type=submit id='heart' alt=" + videoId +" class='btn btn-primary btn-lg'><i class='far fa-heart'></i></button> <button type=submit class='btn btn-danger btn-lg'><i class='fa fa-frown'></i></button><br><br>");
-
-                var createHotelIFrame = $('<iframe width="500" height="315" src="https://www.youtube.com/embed/' + videoId + ' "frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
-
-                hotelVideosDiv.append(hotelButtons);
-                hotelVideosDiv.prepend(createHotelIFrame);
-                
-                $("#hotel-videos").append(hotelVideosDiv);
-        }
-          
-          }
-
-          makeVideos();
+})
 
   
-          // $("#heart").on("click", function (event) {
-          //   event.preventDefault();
-          //   console.log(this);
+  //          $(".btn").on("click", function (event) {
+  //           event.preventDefault();
             
-          //   console.log($(this).attr("alt"));
-          // });  
+  //           var likedVideos = ($(this).attr("alt"));
 
+  //           chosenVideos.push(likedVideos);
 
-  });
+  //           console.log(likedVideos);
+  //           console.log(chosenVideos);
+            
+  //         }); 
 
+  // });
 
+  var chosenVideos = [];
 
-
-
-
+  // console.log(chosenVideos);
 
