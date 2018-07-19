@@ -100,7 +100,7 @@ database.ref().on("child_added", function(childSnapshot){
 
               var trendingButtons = $("<br><button type=submit class='btn btn-primary btn-lg'><i class='far fa-heart'></i></button> <button type=submit class='btn btn-danger btn-lg'><i class='fa fa-frown'></i></button><br><br>");
 
-              var createTrendingIFrame = $('<iframe width="500" height="315" src="https://www.youtube.com/embed/' + videoId + ' "frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+              var createTrendingIFrame = $('<iframe width="400" height="315" src="https://www.youtube.com/embed/' + videoId + ' "frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
 
               trendingVideosDiv.append(trendingButtons);
               trendingVideosDiv.prepend(createTrendingIFrame);
@@ -113,7 +113,7 @@ database.ref().on("child_added", function(childSnapshot){
 
               var hotelButtons = $("<br><button type=submit class='btn btn-primary btn-lg'><i class='far fa-heart'></i></button> <button type=submit class='btn btn-danger btn-lg'><i class='fa fa-frown'></i></button><br><br>");
 
-              var createHotelIFrame = $('<iframe width="500" height="315" src="https://www.youtube.com/embed/' + videoId + ' "frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+              var createHotelIFrame = $('<iframe width="400" height="315" src="https://www.youtube.com/embed/' + videoId + ' "frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
 
               hotelVideosDiv.append(hotelButtons);
               hotelVideosDiv.prepend(createHotelIFrame);
