@@ -38,7 +38,7 @@ $("#go-button").on("click", function (event) {
   var searchTerm = $("#searchInput").val().trim();
 
   var mapDiv = $("<div>");
-  var createMapIFrame = $('<br><iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=&q=' + searchTerm + '"allowfullscreen"></iframe>');
+  var createMapIFrame = $('<br><iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAimomop0IzZOIELamWA3Ex_au10wqv25Y&q=' + searchTerm + '"allowfullscreen"></iframe>');
   mapDiv.append(createMapIFrame);
   $("#map").append(mapDiv);
 
@@ -95,17 +95,11 @@ $("#go-button").on("click", function (event) {
     }
     
   });
-
-  
-  
 });
 
 
 var trendingIndex = 0;
 database.ref('trending').on("child_added", function(childSnapshot) {
-  console.log(childSnapshot)
-
-    
 
   var videoId = childSnapshot.val().videoId;
   var trendingVideosDiv = $("<div>");
@@ -117,8 +111,8 @@ database.ref('trending').on("child_added", function(childSnapshot) {
   trendingVideosDiv.append(trendingButtons);
   trendingVideosDiv.prepend(createTrendingIFrame);
   $("#trending-videos").append(trendingVideosDiv);
+  
   var textId = "#heart-" + trendingIndex
-  console.log(textId)
   
   $(textId).on("click", function (event) {
     console.log(this)
@@ -135,6 +129,8 @@ database.ref('trending').on("child_added", function(childSnapshot) {
 
 });
 
+
+var hotelIndex = 4;
 database.ref('hotel').on("child_added", function(childSnapshot) {
   console.log(childSnapshot)
 
@@ -142,34 +138,31 @@ database.ref('hotel').on("child_added", function(childSnapshot) {
 
     var hotelVideosDiv = $("<div>");
 
-    var hotelButtons = $("<br><button type=submit id='heart' alt=" + videoId +" class='btn btn-primary btn-lg'><i class='far fa-heart'></i></button> <button type=submit class='btn btn-danger btn-lg'><i class='fa fa-frown'></i></button><br><br>");
+    var hotelButtons = $('<br><button type=submit id="heart-' + hotelIndex + '"alt=' + videoId +' class="btn btn-primary btn-lg"><i class="far fa-heart"></i></button> <button type=submit class="btn btn-danger btn-lg"><i class="fa fa-frown"></i></button><br><br>');
 
     var createHotelIFrame = $('<iframe width="500" height="315" src="https://www.youtube.com/embed/' + videoId + ' "frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
 
     hotelVideosDiv.append(hotelButtons);
     hotelVideosDiv.prepend(createHotelIFrame);
-    
     $("#hotel-videos").append(hotelVideosDiv);
 
+    var textId = "#heart-" + hotelIndex
+  
+  $(textId).on("click", function (event) {
+    console.log(this)
+    event.preventDefault();
+    
+    var likedVideos = ($(this).attr("alt"));
+
+    chosenVideos.push(likedVideos);
+    console.log(chosenVideos)
+  })
+
+  hotelIndex++
 
 })
 
-  
-  //          $(".btn").on("click", function (event) {
-  //           event.preventDefault();
-            
-  //           var likedVideos = ($(this).attr("alt"));
-
-  //           chosenVideos.push(likedVideos);
-
-  //           console.log(likedVideos);
-  //           console.log(chosenVideos);
-            
-  //         }); 
-
-  // });
-
   var chosenVideos = [];
 
-  // console.log(chosenVideos);
+  
 
