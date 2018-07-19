@@ -1,60 +1,148 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>MyTRP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    
+
 </head>
+
 <body>
-                
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand text-white" href="index.html">MyTRP</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav text-white">
-            <li class="nav-item mr-5 active">
-                <a class="nav-link text-white" href="#">Get Planning<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item mr-5">
-                <a class="nav-link text-white" href="inspiration.html">Inspire Me</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="personalize.html">Recommend</a>
-            </li>
-            </ul>
-        </div>
-    </nav>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            /* background-color: #2196F3; */
+            padding: 10px;
+        }
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12 text-center text-white">
-                <h1>Where would you like to go?</h1>
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 7;
+        }
+
+        .item2 {
+            grid-column-start: 1;
+            grid-column-end: 7;
+        }
+
+        .item3 {
+            grid-column-start: 1;
+            grid-column-end: 7;
+        }
+
+        .item4 {
+            grid-column-start: 1;
+            grid-column-end: 7;
+        }
+
+        .item5 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .item6 {
+            grid-column-start: 4;
+            grid-column-end: 7;
+        }
+        .item7 {
+            grid-column-start: 1;
+            grid-column-end: 7;
+        }
+    </style>
+    <div class="grid-container">
+        <!-- <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>  
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div> -->
+
+
+        <nav class="item1">
+            <a class="navbar-brand text-white" href="index.html">MyTRP</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav text-white">
+                    <li class="nav-item mr-5 active">
+                        <a class="nav-link text-white" href="#">Get Planning
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link text-white" href="inspiration.html">Inspire Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="personalize.html">Recommend</a>
+                    </li>
+                </ul>
             </div>
+        </nav>
+
+
+        <!-- <div class="container mt-5"> -->
+        <!-- <div class="row"> -->
+        <div class="item2" text-align: center>
+            <h1>Where would you like to go?</h1>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                    <form> 
-                        <div class="form-group text-center">
-                            <label for="searchQuery"></label>
-                            <input type="search" class="form-control-lg text-center" id="searchInput" placeholder="Take me to...">
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <button type="submit" class="btn btn-primary btn-lg" id="go-button">Go</button>
-                        </div>
-                    </form>
+    <!-- </div> -->
+    <!-- <div class="row"> -->
+    <div class="item3">
+        <form>
+            <div class="form-group text-center">
+                <label for="searchQuery"></label>
+                <input type="search" class="form-control-lg text-center" id="searchInput" placeholder="Take me to...">
             </div>
-        </div>
-
-
+            <div class="item4">
+                <button type="submit" class="btn btn-primary btn-lg" id="go-button" style="display: block; margin: 0 auto;">Go</button>
+            </div>
+        </form>
     </div>
-    <div class="container mt-5">
+    <!-- </div> -->
+
+
+    <!-- </div> -->
+    <!-- <div class="container mt-5"> -->
+    <!-- <div class="row"> -->
+    <div class="item5">
+        <h1>What's Trending</h1>
+        <div id="trending-videos"></div>
+    </div>
+    <div class="item6">
+        <h1>Hotels and Resorts</h1>
+        <div id="hotel-videos"></div>
+    </div>
+    <!-- </div> -->
+    <div class="item7" text-align: center>
+        <div id="map"></div>
+        <h1>Map</h1>
+    </div>
+    </div>
+    <!-- Link to Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <!-- Link to Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <!-- <div class="container mt-5">
         <div class="row">
         <div class="col-md-6 text-center text-dark bg-light">
             <div id="trending-videos"></div>
@@ -66,17 +154,11 @@
     <div class="row">
         <div class="col-md-12">
             <div style="text-align: center" id="map">
-                <!-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAimomop0IzZOIELamWA3Ex_au10wqv25Y&q=Space+Needle,Seattle+WA" allowfullscreen></iframe> -->
+                 <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAimomop0IzZOIELamWA3Ex_au10wqv25Y&q=Space+Needle,Seattle+WA" allowfullscreen></iframe>
             </div>
         </div>
-    </div>
+    </div> -->
 
-<!-- Link to Fontawesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-<!-- Link to Firebase-->
-<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="index.js"></script>
-    
 </body>
+
 </html>
