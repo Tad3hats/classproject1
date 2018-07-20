@@ -3,24 +3,20 @@ var questions = [
     {question: "How will you get there?", choices: ["Airplane", "Car", "Train", "Boat"], answer: ""},
     {question: "What's on the agenda?", choices: ["Lot's of outdoor activities", "Touristy Stuff", "Relax Indoors", "Be a Beach Bum"], answer: ""},
     {question: "Who will you go with?", choices: ["Your Family", "Your Friends", "Your Partner", "By yourself"], answer: ""},
-    {question: "Pick an afternoon activities", choices: ["Drinking", "Sailing", "Cooking Class", "Swimming"], answer: ""},
+    {question: "Pick an afternoon activity", choices: ["Drinking", "Sailing", "Cooking Class", "Swimming"], answer: ""},
     {question: "What ocean would you like to visit?", choices: ["Indian Ocean", "Atlantic Ocean", "Pacific Ocean", "Antartic Ocean"], answer: ""},
     {question: "Choose a Dinner", choices: ["Arepas", "Pasta", "Chicken Curry", "Sushi"], ansewr: "Dumplings"},
-    {question: "Another Question", choices: ["Hydrogen", "Lythium", "Oxygen", "Nitrogen"], answer: ""}, 
-    {question: "Another Question 2", choices: ["15,245 feet", "28,469 feet", "54,411 feet", "35,814 feet"], answer: ""},
-    {question: "Another Question 3", choices: ["Purple", "Pink", "Yellow", "Black"], answer: ""}, 
+    {question: "What places interest you the most", choices: ["Disneyland", "Las Vegas", "Hawaii", "Los Angeles"], answer: ""}, 
+    {question: "What are your favorite hotels", choices: ["Ritz", "Holiday Inn", "The W", "Hayatt"], answer: ""},
+    {question: "What continent would you like to visit", choices: ["Australia", "Europe", "Asia", "Africa"], answer: ""}, 
 ];
-    
-    // var secRemain = 60;
   
       var intervalId;
-  
    
-     // bellow function will show the trivia questions and will decrement the counter by 1 second.
+     // bellow function will show the quizz questions and will decrement the counter by 1 second.
       function begin() {
     
         intervalId = setInterval(timesUp, 1000);
-  
     
         $("#question0").show();
         $("#question1").show();
@@ -57,7 +53,6 @@ var questions = [
         }
       }
   
-     // Show time decreasing and once time is up, hide question and show all done results.
       function timesUp() {
   
         secRemain--;
@@ -70,8 +65,6 @@ var questions = [
           showAllDone();
         }
       }
-  
-     // the below function is called when time is up:
 
       function hideQuestion() {
         $("#question0").hide();

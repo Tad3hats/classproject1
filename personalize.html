@@ -44,16 +44,20 @@
                     <button id="startButton" class="btn btn-primary btn-lg">Go</button>
                 </div>
 
-                <form id="question0"></form>
-                <form id="question1"></form>
-                <form id="question2"></form>
-                <form id="question3"></form>
-                <form id="question4"></form>
-                <form id="question5"></form>
-                <form id="question6"></form>
-                <form id="question7"></form>
-                <form id="question8"></form>
-                <form id="question9"></form>
+                    <div id="questions">
+
+                    <form id="question0"></form>
+                    <form id="question1"></form>
+                    <form id="question2"></form>
+                    <form id="question3"></form>
+                    <form id="question4"></form>
+                    <form id="question5"></form>
+                    <form id="question6"></form>
+                    <form id="question7"></form>
+                    <form id="question8"></form>
+                    <form id="question9"></form>
+
+                    </div>
 
                 <h2 id="log"></h2>
                 <div id="correctAnswer"> Correct Answers: </div>
@@ -67,6 +71,22 @@
             </div>
         </div>
     </div>
+    <div class="container mt-5 border border-dark">
+        <div class="row">
+            <div class="col-md-12 text-center text-white">
+    <form>
+        <div>
+          <label for="choose">Are you traveling solo, with a partner or in a group?</label>
+          <input id="choose" name="i_like" required pattern="solo|partner|group">
+        </div>
+        <div>
+          <label for="number">Number of Travelers</label>
+          <input type="number" id="number" name="amount" value="1" min="1" max="10">
+        </div>
+        <div>
+            <button id="startButton" class="btn btn-primary btn-lg">Submit</button>
+        </div>
+      </form>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="personalize.js"></script>
