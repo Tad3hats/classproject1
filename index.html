@@ -74,14 +74,15 @@
             grid-column-start: 1;
             grid-column-end: 7;
         }
+
         .item9 {
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.4);
             grid-column-start: 1;
             grid-column-end: 7;
         }
     </style>
     <div class="grid-container">
-            <!-- this is the styling just for the nav within grid1 -->
+        <!-- this is the styling just for the nav within grid1 -->
         <style>
             body {
                 margin: 0;
@@ -120,11 +121,13 @@
 
             </div>
         </div>
-        
-        <div class="item3" text-align: center >
-            <h1><em>Where would you like to go?</em></h1>
+
+        <div class="item3" text-align: center>
+            <h1>
+                <em>Where would you like to go?</em>
+            </h1>
         </div>
-        
+
         <div class="item4">
             <form>
                 <div class="form-group text-center">
@@ -136,7 +139,7 @@
                 </div>
             </form>
         </div>
-        
+
         <div class="item6">
             <!-- grid6 will contain the YouTube video results -->
             <div id="trending-videos"></div>
@@ -151,10 +154,16 @@
             <div id="map"></div>
         </div>
         <div class="item9" text-align: center>
-                <!--  grid9 will contain the videos that are liked by the user from grid 6 -->
-                <div id="most-liked"></div>
-            </div>
+            <!--  grid9 will contain the videos that are liked by the user from grid 6 -->
+            <div id="most-liked"></div>
+        </div>
     </div>
+    <!--  footer will contain copyright and a badass message just because -->
+    <footer class="footer">
+        <img src="assets/pacman-ghost-orange-prints.jpg" height="20">
+        copyright 2018.  Dont steal our sh*t
+    </footer>
+
     <!-- Link to Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">

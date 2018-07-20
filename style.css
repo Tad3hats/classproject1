@@ -83,3 +83,11 @@ body {
     grid-column-start: 1;
     grid-column-end: 7;
 }
+.footer {
+    text-align: center;
+    width: 100%;
+    font-size: 30%;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* padding: 10px; */
+    position: fixed; bottom: 0px;
+}
