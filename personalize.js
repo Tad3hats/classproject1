@@ -7,7 +7,7 @@ var questions = [
     {question: "What ocean would you like to visit?", choices: ["Indian Ocean", "Atlantic Ocean", "Pacific Ocean", "Antartic Ocean"], answer: ""},
     {question: "Choose a Dinner", choices: ["Arepas", "Pasta", "Chicken Curry", "Sushi"], ansewr: "Dumplings"},
     {question: "What places interest you the most", choices: ["Disneyland", "Las Vegas", "Hawaii", "Los Angeles"], answer: ""}, 
-    {question: "What are your favorite hotels", choices: ["Ritz", "Holiday Inn", "The W", "Hayatt"], answer: ""},
+    {question: "What are your favorite hotels", choices: ["Ritz", "Holiday Inn", "The W", "Hyatt"], answer: ""},
     {question: "What continent would you like to visit", choices: ["Australia", "Europe", "Asia", "Africa"], answer: ""}, 
 ];
   
