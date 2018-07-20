@@ -37,9 +37,11 @@ $("#go-button").on("click", function (event) {
 
   var searchTerm = $("#searchInput").val().trim();
 
+  var mapHeader = $("<h1>Map</h1>");
   var mapDiv = $("<div>");
-  var createMapIFrame = $('<br><iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAimomop0IzZOIELamWA3Ex_au10wqv25Y&q=' + searchTerm + '"allowfullscreen"></iframe>');
+  var createMapIFrame = $('<br><iframe width="550" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAimomop0IzZOIELamWA3Ex_au10wqv25Y&q=' + searchTerm + '"allowfullscreen"></iframe>');
   mapDiv.append(createMapIFrame);
+  $("#map").prepend(mapHeader);
   $("#map").append(mapDiv);
 
   var trendingHeader = $("<h1>What's Trending</h1>");
@@ -53,7 +55,7 @@ $("#go-button").on("click", function (event) {
 
   console.log(searchTerm);
 
-  var trendingQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=things+to+do+in+" + searchTerm + "&type=video&videoCaption=closedCaption&maxResults=4&key=AIzaSyDkyhWrY5vrU3x1xIKmzlyjaKX3mBGKTJ8";
+  var trendingQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=things+to+do+in+" + searchTerm + "&type=video&videoCaption=closedCaption&maxResults=3&key=AIzaSyDkyhWrY5vrU3x1xIKmzlyjaKX3mBGKTJ8";
 
   $.ajax({
     url: trendingQueryURL,
@@ -75,7 +77,7 @@ $("#go-button").on("click", function (event) {
   });
 
 
-  var hotelQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=hotel+in+" + searchTerm + "&type=video&videoCaption=closedCaption&maxResults=4&key=AIzaSyDkyhWrY5vrU3x1xIKmzlyjaKX3mBGKTJ8";
+  var hotelQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=hotel+in+" + searchTerm + "&type=video&videoCaption=closedCaption&maxResults=3&key=AIzaSyDkyhWrY5vrU3x1xIKmzlyjaKX3mBGKTJ8";
 
   $.ajax({
     url: hotelQueryURL,

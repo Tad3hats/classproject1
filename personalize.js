@@ -38,7 +38,7 @@ var questions = [
         // For loop to go through all the questions 
         for(var j=0; j<questions.length; j++ ) {
           var question = questions[j];
-          var newQues = $("<h3>" + question.question + "</h3>");
+          var newQues = $("<p><h3><u>" + question.question + "</u></h3>");
   
           newQues.appendTo($("#question"+j));
   
