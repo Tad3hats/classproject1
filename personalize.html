@@ -1,47 +1,107 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>MyTRP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    
-</head>
-<body>
-                
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand text-white" href="index.html">MyTRP</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav text-white">
-            <li class="nav-item mr-5">
-                <a class="nav-link text-white" href="index.html">Get Plannind<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item mr-5">
-                <a class="nav-link text-white" href="inspiration.html">Inspire Me</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link text-white" href="#">Recommend</a>
-            </li>
-            </ul>
-        </div>
-    </nav>
 
-    <div class="container mt-5 border border-dark">
-        <div class="row">
-            <div class="col-md-12 text-center text-white">
-                <h1>This is where the quiz will go</h1>
+</head>
+
+<body>
+    <div class="grid-container">
+        <!-- this is the styling just for the nav within grid1 -->
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color: peru;
+            }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a.active {
+                background-color:blue;
+                color: white;
+            }
+
+            .item2 {
+                background-color: rgba(255, 255, 255, 0.5);
+                color: blue;
+                grid-column-start: 1;
+                grid-column-end: 7;
+            }
+        </style>
+        <div class="item1">
+            <div class="topnav">
+                <a class="active" href="#">MyTRP</a>
+                <a href="index.html">Home</a>
+                <a href="personalize.html">Recommend</a>
+
+            </div>
+        </div>
+
+        <div class="item2">
+            <em>
+                <h1>Want a more personalized Travel Experience?</h1>
+                answer a few quick questions below</em>
+            <div id="show-number"></div>
+
+            <br>
+
+            <div class="col-md-12 text-center">
+                <button id="startButton" class="btn btn-primary btn-lg">Go</button>
+            </div>
+
+            <form id="question0"></form>
+            <form id="question1"></form>
+            <form id="question2"></form>
+            <form id="question3"></form>
+            <form id="question4"></form>
+            <form id="question5"></form>
+            <form id="question6"></form>
+            <form id="question7"></form>
+            <form id="question8"></form>
+            <form id="question9"></form>
+
+            <h2 id="log"></h2>
+            <div id="correctAnswer"> Correct Answers: </div>
+            <div id="incorrectAnswer"> Incorrect Answers: </div>
+            <div id="unanswered"> Unanswered: </div>
+
+            <!-- <button id="doneButton">Done</button> -->
+            <div class="col-md-12 text-center">
+                <button id="doneButton" class="btn btn-primary btn-lg">Done</button>
             </div>
         </div>
     </div>
+    </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="app.js"></script>
-    
+
+    <!--  footer will contain copyright and a badass message just because -->
+    <footer class="footer">
+        <img src="assets/pacman-ghost-orange-prints.jpg" height="20"> copyright 2018. Dont steal our sh*t
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="personalize.js"></script>
+
 </body>
+
 </html>
